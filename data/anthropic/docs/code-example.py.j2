@@ -3,7 +3,7 @@ import anthropic
 
 client = anthropic.Anthropic(
     api_key=os.getenv("UNITYSVC_API_KEY"),
-    base_url=os.getenv("base_url")
+    base_url=os.getenv("UNITYSVC_BASE_URL")
 )
 
 message = client.messages.create(

@@ -4,7 +4,7 @@ import anthropic
 
 client = anthropic.Anthropic(
     api_key=os.environ.get("UNITYSVC_API_KEY"),
-    base_url=os.environ.get("base_url")
+    base_url=os.environ.get("UNITYSVC_BASE_URL")
 )
 
 def echo_message(message):
