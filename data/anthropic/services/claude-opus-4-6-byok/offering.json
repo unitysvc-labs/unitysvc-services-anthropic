@@ -24,6 +24,8 @@
   "service_type": "llm",
   "status": "ready",
   "tags": [
+    "ai",
+    "gateway",
     "byok"
   ],
   "time_created": "2026-02-08T18:34:37.728441Z",
