@@ -1,0 +1,38 @@
+{
+  "parameters": {
+    "api_base_url": "https://api.anthropic.com",
+    "description": "Claude Sonnet 5 language model",
+    "details": {
+      "context_length": 1000000,
+      "litellm_provider": "anthropic",
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 128000,
+      "max_tokens": 128000,
+      "metadata_sources": {
+        "context_length": "openrouter"
+      },
+      "mode": "chat",
+      "parameter_count": null
+    },
+    "display_name": "Claude Sonnet 5",
+    "env_api_key_name": "ANTHROPIC_API_KEY",
+    "list_price": {
+      "cached_input": "0",
+      "description": "Service provider charges $3 / $15 / $0.3 per 1M input/output/cached tokens",
+      "input": "0",
+      "output": "0",
+      "type": "one_million_tokens"
+    },
+    "offering_name": "claude-sonnet-5",
+    "payout_price": {
+      "cached_input": "0",
+      "description": "Service provider charges $3 / $15 / $0.3 per 1M input/output/cached tokens",
+      "input": "0",
+      "output": "0",
+      "type": "one_million_tokens"
+    },
+    "provider_display_name": "Anthropic",
+    "service_type": "llm",
+    "status": "ready"
+  }
+}
