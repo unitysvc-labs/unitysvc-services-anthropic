@@ -2,6 +2,7 @@
   "contact_email": "support@anthropic.com",
   "display_name": "Anthropic",
   "homepage": "https://www.anthropic.com/",
+  "logo": "https://www.anthropic.com/images/icons/android-chrome-512x512.png",
   "name": "anthropic",
   "status": "ready",
   "terms_of_service": "https://www.anthropic.com/legal/terms",
