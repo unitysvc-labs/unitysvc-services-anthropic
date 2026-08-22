@@ -23,11 +23,9 @@
     },
     "offering_name": "claude-opus-4-8",
     "payout_price": {
-      "cached_input": "0",
-      "description": "Service provider charges $5 / $25 / $0.5 per 1M input/output/cached tokens",
-      "input": "0",
-      "output": "0",
-      "type": "one_million_tokens"
+      "description": "Free (BYOK)",
+      "price": "0",
+      "type": "constant"
     },
     "pricing_note": "$5 / $25 / $0.5 per 1M input/output/cached tokens",
     "provider_display_name": "Anthropic",

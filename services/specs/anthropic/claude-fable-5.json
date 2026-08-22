@@ -23,11 +23,9 @@
     },
     "offering_name": "claude-fable-5",
     "payout_price": {
-      "cached_input": "0",
-      "description": "Service provider charges $10 / $50 / $1 per 1M input/output/cached tokens",
-      "input": "0",
-      "output": "0",
-      "type": "one_million_tokens"
+      "description": "Free (BYOK)",
+      "price": "0",
+      "type": "constant"
     },
     "pricing_note": "$10 / $50 / $1 per 1M input/output/cached tokens",
     "provider_display_name": "Anthropic",
