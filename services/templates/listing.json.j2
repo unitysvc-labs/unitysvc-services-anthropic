@@ -34,33 +34,30 @@
       "routing_key": {"model": "{{ offering_name }}"}
     }
   },
+  {#- Every document below is DERIVED from what this service is: its
+      capability and the request dialects it accepts (unitysvc/unitysvc#1899).
+      The catalog-wide shape lives in unitysvc-data's `llm_example_collection`
+      preset, so a new example flavour or a fixed preset reaches this repo on
+      the next release rather than through a PR here.
+
+      This is the INVERTED repo: the upstream speaks Anthropic Messages, so
+      `upstream_dialect` is anthropic and the collection selects the
+      anthropic-native examples plus the openai_to_anthropic translations —
+      the mirror image of every OpenAI-upstream catalog. It also picks the
+      anthropic connectivity probe and request template, which this block
+      previously had to name by hand.
+
+      Anything specific to one service goes in a SIBLING key beside the
+      sentinel: `expand_presets` merges siblings over the expanded mapping, so
+      a listing can add a document the collection cannot derive, or replace one
+      it generated, by title. Anthropic needs none. -#}
   "documents": {
-    "How to use this model": {
-      "$doc_preset": "llm_description"
-    },
-    "Python code example": {
-      "$doc_preset": {"name": "llm_code_example_anthropic", "meta": {"sleep_after_test": 5}}
-    },
-    "Python code example (OpenAI-style input)": {
-      "$doc_preset": {"name": "llm_code_example_openai_to_anthropic_requests", "meta": {"sleep_after_test": 5}}
-    },
-    "cURL code example (OpenAI-style input)": {
-      "$doc_preset": {"name": "llm_code_example_openai_to_anthropic_shell", "meta": {"sleep_after_test": 5}}
-    },
-    "Python function calling code example": {
-      "$doc_preset": {"name": "llm_code_example_anthropic_fc", "meta": {"sleep_after_test": 5}}
-    },
-    "JavaScript code example": {
-      "$doc_preset": {"name": "llm_code_example_anthropic_javascript", "meta": {"sleep_after_test": 5}}
-    },
-    "cURL code example": {
-      "$doc_preset": {"name": "llm_code_example_anthropic_shell", "meta": {"sleep_after_test": 5}}
-    },
-    "Connectivity test": {
-      "$doc_preset": {"name": "llm_connectivity_anthropic", "meta": {"sleep_after_test": 5}}
-    },
-    "Default request body": {
-      "$doc_preset": "llm_request_template_anthropic"
+    "$llm_example_collection": {
+      "capabilities": ["chat"],
+      "formats": ["anthropic", "openai"],
+      "upstream_dialect": "anthropic",
+      "tools": true,
+      "sleep": 5
     }
   }
 }
