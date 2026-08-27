@@ -4,6 +4,21 @@
   "homepage": "https://www.anthropic.com/",
   "logo": "https://www.anthropic.com/images/icons/android-chrome-512x512.png",
   "name": "anthropic",
+  "rate_limits": [
+    {
+      "description": "Self-imposed ceiling so platform test sweeps cannot saturate the account; not a published provider limit.",
+      "limit": 10,
+      "name": "anthropic_concurrency",
+      "unit": "concurrent"
+    },
+    {
+      "description": "Self-imposed ceiling so platform test sweeps cannot saturate the account; not a published provider limit.",
+      "limit": 100,
+      "name": "anthropic_rpm",
+      "unit": "requests",
+      "window": "minute"
+    }
+  ],
   "status": "ready",
   "terms_of_service": "https://www.anthropic.com/legal/terms",
   "time_created": "2025-01-25T00:00:00Z"
