@@ -1,0 +1,35 @@
+{
+  "parameters": {
+    "api_base_url": "https://api.anthropic.com",
+    "description": "Claude Fable 5 1 language model",
+    "details": {
+      "context_length": 1000000,
+      "litellm_provider": "anthropic",
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 128000,
+      "max_tokens": 128000,
+      "metadata_sources": {
+        "context_length": "litellm"
+      },
+      "mode": "chat",
+      "parameter_count": null
+    },
+    "display_name": "Claude Fable 5 1",
+    "env_api_key_name": "ANTHROPIC_API_KEY",
+    "list_price": {
+      "description": "Free (BYOK)",
+      "price": "0",
+      "type": "constant"
+    },
+    "offering_name": "claude-fable-5-1",
+    "payout_price": {
+      "description": "Free (BYOK)",
+      "price": "0",
+      "type": "constant"
+    },
+    "pricing_note": "$10 / $50 / $0.25 per 1M input/output/cached tokens",
+    "provider_display_name": "Anthropic",
+    "service_type": "llm",
+    "status": "ready"
+  }
+}
